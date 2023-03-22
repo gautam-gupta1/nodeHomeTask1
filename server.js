@@ -1,7 +1,7 @@
 const http = require('http');
 
 const server = http.createServer(async (req,res)=>{
- 
+       //if endpoint matches the regex expression then respond with the name
      if(req.url.match(/\/\?name\=[a-zA-Z]+/)&&req.method==="GET"){
         const name = req.url.slice(7)
          res.writeHead(200,{ "Content-Type": "text/plain" })
